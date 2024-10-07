@@ -1,0 +1,6 @@
+#+title: Mush, Lisp Edition
+#+author: Cam
+
+
+* Why Do You Keep On Rewriting This Damn Project
+Shells are fun, and I want to write one in lisp.
