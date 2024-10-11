@@ -5,7 +5,10 @@
   (define (get-and-format)
     (string-split (get-line (current-input-port))
 		  #\ ))
-  
-  (if (equal? (get-and-format) '("exit"))
-      0
-      (mush-loop)))
+
+  (define-syntax exec-command-list!
+    (syntax-rules ()
+      ((exec-command-list! command-list)
+       (system* . command-list))))
+
+  (exec-command-list! ((get-and-format))))
